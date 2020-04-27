@@ -10,7 +10,7 @@ Source0:        https://github.com/stedolan/jq/releases/download/%{name}-%{versi
 BuildRequires:  gcc
 BuildRequires:  flex
 BuildRequires:  bison
-BuildRequires:  oniguruma-devel
+BuildRequires:  oniguruma6-devel
 
 %ifnarch s390
 BuildRequires:  valgrind
@@ -89,6 +89,9 @@ make check
 
 
 %changelog
+* Mon Apr 27 2020 David Alger <davidmalger@gmail.com> - 1.6-4
+- Switch to kelnei/oniguruma6 for use with IUS
+
 * Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1.6-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
